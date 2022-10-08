@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-color: #282a35;
+  --btn-color: #d9d9d9;
+  --btn-hover-color: #ddd;
+  --checked-color: #888;
+  --list-color: #eee;
+  --list-hover-color: #ddd;
+  --list-odd-color: #f9f9f9;
+}
+
+body {
+  /* background: linear-gradient(to right); */
+  background: radial-gradient(#fff5e4, #ffe3e1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: auto;
+}
+
+/* container width and making it centered */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* header area styling */
+
+.header-container {
+  background-color: var(--header-color);
+}
+
+.header .container h1 {
+  padding: 30px 0;
+  color: white;
+}
+
+.input-form {
+  /* width: 100%; */
+  padding: 0 50px 30px 50px;
+
+  display: flex;
+}
+
+.input-form input {
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.todo-input {
+  width: 75%;
+  padding-left: 20px;
+}
+
+.todo-submit {
+  width: 25%;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  transition: all 0.6s ease;
+}
+
+.todo-submit:hover {
+  background-color: var(--btn-hover-color);
+}
+
+/* header area styling */
+
+/* list section */
+
+.list li {
+  width: 100%;
+  min-height: 40px;
+  padding: 0px 42px 0 42px;
+  list-style: none;
+  background-color: var(--list-color);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.check-mark {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  width: 42px;
+  color: white;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-mark.check-mark-show {
+  display: flex;
+}
+
+/* checked state of list  */
+.list li.checked,
+.list li:nth-child(odd).checked {
+  background-color: var(--checked-color);
+  text-decoration: line-through;
+  color: white;
+}
+
+.list li.checked:hover,
+.list li:nth-child(odd).checked:hover {
+  background-color: #6d6d6d;
+}
+
+.close-mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  height: 40px;
+  width: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+
+.close-mark:hover {
+  background-color: #f44336;
+  color: var(--btn-color);
+}
+.list li .content {
+  padding-top: 5px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list li:nth-child(odd) {
+  background-color: var(--list-odd-color);
+}
+
+.list li:hover {
+  background-color: var(--list-hover-color);
+}
+
+.list li .content h1 {
+  font-weight: 400;
+}
+
+i {
+  pointer-events: none;
+}
+
+/* list section */
